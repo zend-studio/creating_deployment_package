@@ -30,7 +30,8 @@ class EmployeeService {
   }
   
   public function getEmployees() {
-  	 $tablename = $this->tablename;
+     $row = null;
+     $tablename = $this->tablename;
      $stmt = mysqli_prepare($this->connection,
           "SELECT
               $tablename.firstname,
